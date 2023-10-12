@@ -21,13 +21,13 @@ public class MemoryCandidateRepository implements CandidateRepository {
 
     private MemoryCandidateRepository() {
         save(new Candidate(0, "Dmitry Arinin", "Java middle Developer",
-                LocalDateTime.now(), 1));
+                LocalDateTime.now(), 1, 0));
         save(new Candidate(0, "Vasalaty Anton", "Java middle+ Developer",
-                LocalDateTime.now(), 2));
+                LocalDateTime.now(), 2, 0));
         save(new Candidate(0, "Cheban Nikolay", "Java senior Developer",
-                LocalDateTime.now(), 3));
+                LocalDateTime.now(), 3, 0));
         save(new Candidate(0, "Volkova Alina", "Java senior+ Developer",
-                LocalDateTime.now(), 1));
+                LocalDateTime.now(), 1, 0));
     }
 
     @Override
@@ -49,7 +49,8 @@ public class MemoryCandidateRepository implements CandidateRepository {
                         candidate.getName(),
                         candidate.getDescription(),
                         candidate.getCreationDate(),
-                        candidate.getCityId())) != null;
+                        candidate.getCityId(),
+                        candidate.getFileId())) != null;
     }
 
     @Override
